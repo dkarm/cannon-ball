@@ -4,6 +4,7 @@
 
 
 #include "Powerbar.hpp"
+#include "Cannon.hpp"
 #include <sstream>
 
 int main(int, char const**)
@@ -38,6 +39,15 @@ int main(int, char const**)
     
     //control on the power
     int power = 0;
+    
+    //load the cannon image
+    sf::Texture cannon_icon;
+    cannon_icon.loadFromFile("/Users/diptikarmarkar/Documents/GD/Cannonball/Cannonball/cannon-clipart.jpg");
+    
+    //create a class using the cannon
+    Cannon cannon1(window, cannon_icon);
+    
+    
 
     
     // Start the game loop
