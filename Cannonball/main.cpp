@@ -42,7 +42,7 @@ int main(int, char const**)
     
     //load the cannon image
     sf::Texture cannon_icon;
-    cannon_icon.loadFromFile("/Users/diptikarmarkar/Documents/GD/Cannonball/Cannonball/cannon-clipart.jpg");
+    cannon_icon.loadFromFile("/Users/diptikarmarkar/Documents/GD/Cannonball/Cannonball/A_cannon.jpg");
     
     //create a class using the cannon
     Cannon cannon1(window, cannon_icon);
@@ -86,7 +86,18 @@ int main(int, char const**)
         std::stringstream ss;
         ss << bar.getstrength();
         message.setString(ss.str());
+        
+        
+        //rotate the cannon
+        if (power>0 && sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
+        {
+            cannon1.set_rotation(1);
+        }
     
+        if (power>0 && sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
+        {
+            cannon1.set_rotation(2);
+        }
         
 
         // Clear screen
@@ -94,6 +105,9 @@ int main(int, char const**)
 
         //show the bar
         bar.draw();
+        
+        //show the cannon
+        cannon1.draw();
         
         //show message
         window.draw(message);

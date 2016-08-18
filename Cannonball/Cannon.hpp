@@ -15,9 +15,9 @@
 class Cannon
 {
 public:
-    Cannon(sf::RenderWindow &window, sf::Texture cannon_icon);
+    Cannon(sf::RenderWindow &window,sf::Texture &cannon_icon);
     int get_rotation();
-    int set_rotation();
+    void set_rotation(int direction);
     void draw();
     
     
@@ -26,7 +26,9 @@ public:
 private:
     sf::RenderWindow &window;
     sf::Sprite cannon;
-    int rotation;
+    float rotation;
+    float rotation_speed = 1;
+    sf::FloatRect origin;
     
     
     
