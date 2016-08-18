@@ -1,61 +1,45 @@
 
-//
-// Disclamer:
-// ----------
-//
-// This code will work only if you selected window, graphics and audio.
-//
-// Note that the "Run Script" build phase will copy the required frameworks
-// or dylibs to your application bundle so you can execute it on any OS X
-// computer.
-//
-// Your resource files (images, sounds, fonts, ...) are also copied to your
-// application bundle. To get the path to these resource, use the helper
-// method resourcePath() from ResourcePath.hpp
-//
 
-#include <SFML/Audio.hpp>
 #include <SFML/Graphics.hpp>
 
-// Here is a small helper for you ! Have a look.
-#include "ResourcePath.hpp"
+
+#include "Powerbar.hpp"
+#include <sstream>
 
 int main(int, char const**)
 {
     // Create the main window
     sf::RenderWindow window(sf::VideoMode(800, 600), "SFML window");
-
-    // Set the Icon
-    sf::Image icon;
-    if (!icon.loadFromFile(resourcePath() + "icon.png")) {
-        return EXIT_FAILURE;
-    }
-    window.setIcon(icon.getSize().x, icon.getSize().y, icon.getPixelsPtr());
-
-    // Load a sprite to display
-    sf::Texture texture;
-    if (!texture.loadFromFile(resourcePath() + "cute_image.jpg")) {
-        return EXIT_FAILURE;
-    }
-    sf::Sprite sprite(texture);
-
-    // Create a graphical text to display
+    
+    //create the powerbar
+    Powerbar bar(window);
+    
+    //create text
+    sf::Text message;
+    
+    //set text color
+    message.setColor(sf::Color::White);
+    
+    //load a font
     sf::Font font;
-    if (!font.loadFromFile(resourcePath() + "sansation.ttf")) {
-        return EXIT_FAILURE;
-    }
-    sf::Text text("Hello SFML", font, 50);
-    text.setColor(sf::Color::Black);
+    font.loadFromFile("/Users/diptikarmarkar/Documents/GD/Cannonball/Cannonball/Sansation.ttf");
+    
+    //set a font
+    message.setFont(font);
+    
+    //set size
+    message.setCharacterSize(25);
+    
+    //set position
+    message.setPosition(110, 0);
+    
+    //set frame
+    window.setFramerateLimit(30);
+    
+    //control on the power
+    int power = 0;
 
-    // Load a music to play
-    sf::Music music;
-    if (!music.openFromFile(resourcePath() + "nice_music.ogg")) {
-        return EXIT_FAILURE;
-    }
-
-    // Play the music
-    music.play();
-
+    
     // Start the game loop
     while (window.isOpen())
     {
@@ -73,15 +57,36 @@ int main(int, char const**)
                 window.close();
             }
         }
+        
+        //start moving the bar
+        if(sf::Keyboard::isKeyPressed(sf::Keyboard::Space))
+        {
+            bar.startbar();
+            power++;
+        }
+        
+        //stop the bar once the space key is released & assign a power number
+        if (!sf::Keyboard::isKeyPressed(sf::Keyboard::Space) && power>0)
+        {
+            bar.stopbar();
+        }
+        
+            
+        //set message text
+        std::stringstream ss;
+        ss << bar.getstrength();
+        message.setString(ss.str());
+    
+        
 
         // Clear screen
         window.clear();
 
-        // Draw the sprite
-        window.draw(sprite);
-
-        // Draw the string
-        window.draw(text);
+        //show the bar
+        bar.draw();
+        
+        //show message
+        window.draw(message);
 
         // Update the window
         window.display();

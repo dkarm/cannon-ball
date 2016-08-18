@@ -7,24 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C459A2F71D6504FB00F8CEA4 /* ResourcePath.mm in Sources */ = {isa = PBXBuildFile; fileRef = C459A2F61D6504FB00F8CEA4 /* ResourcePath.mm */; };
 		C459A2FA1D6504FB00F8CEA4 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C459A2F91D6504FB00F8CEA4 /* main.cpp */; };
-		C459A2FD1D6504FB00F8CEA4 /* cute_image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C459A2FC1D6504FB00F8CEA4 /* cute_image.jpg */; };
-		C459A2FF1D6504FB00F8CEA4 /* nice_music.ogg in Resources */ = {isa = PBXBuildFile; fileRef = C459A2FE1D6504FB00F8CEA4 /* nice_music.ogg */; };
-		C459A3011D6504FB00F8CEA4 /* sansation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C459A3001D6504FB00F8CEA4 /* sansation.ttf */; };
-		C459A3031D6504FB00F8CEA4 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C459A3021D6504FB00F8CEA4 /* icon.png */; };
+		C459A30B1D65054E00F8CEA4 /* Cannon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C459A3091D65054E00F8CEA4 /* Cannon.cpp */; };
+		C459A30E1D6505C400F8CEA4 /* Ball.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C459A30C1D6505C400F8CEA4 /* Ball.cpp */; };
+		C459A3111D6505D200F8CEA4 /* Powerbar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C459A30F1D6505D200F8CEA4 /* Powerbar.cpp */; };
+		C459A3141D6505DC00F8CEA4 /* Target.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C459A3121D6505DC00F8CEA4 /* Target.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C459A2F11D6504FB00F8CEA4 /* Cannonball.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cannonball.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C459A2F51D6504FB00F8CEA4 /* Cannonball-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Cannonball-Info.plist"; sourceTree = "<group>"; };
-		C459A2F61D6504FB00F8CEA4 /* ResourcePath.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ResourcePath.mm; sourceTree = "<group>"; };
-		C459A2F81D6504FB00F8CEA4 /* ResourcePath.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ResourcePath.hpp; sourceTree = "<group>"; };
 		C459A2F91D6504FB00F8CEA4 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		C459A2FC1D6504FB00F8CEA4 /* cute_image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cute_image.jpg; sourceTree = "<group>"; };
-		C459A2FE1D6504FB00F8CEA4 /* nice_music.ogg */ = {isa = PBXFileReference; lastKnownFileType = file; path = nice_music.ogg; sourceTree = "<group>"; };
-		C459A3001D6504FB00F8CEA4 /* sansation.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sansation.ttf; sourceTree = "<group>"; };
-		C459A3021D6504FB00F8CEA4 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		C459A3091D65054E00F8CEA4 /* Cannon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Cannon.cpp; sourceTree = "<group>"; };
+		C459A30A1D65054E00F8CEA4 /* Cannon.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Cannon.hpp; sourceTree = "<group>"; };
+		C459A30C1D6505C400F8CEA4 /* Ball.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Ball.cpp; sourceTree = "<group>"; };
+		C459A30D1D6505C400F8CEA4 /* Ball.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Ball.hpp; sourceTree = "<group>"; };
+		C459A30F1D6505D200F8CEA4 /* Powerbar.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Powerbar.cpp; sourceTree = "<group>"; };
+		C459A3101D6505D200F8CEA4 /* Powerbar.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Powerbar.hpp; sourceTree = "<group>"; };
+		C459A3121D6505DC00F8CEA4 /* Target.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Target.cpp; sourceTree = "<group>"; };
+		C459A3131D6505DC00F8CEA4 /* Target.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Target.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,11 +58,17 @@
 		C459A2F31D6504FB00F8CEA4 /* Cannonball */ = {
 			isa = PBXGroup;
 			children = (
-				C459A2F61D6504FB00F8CEA4 /* ResourcePath.mm */,
-				C459A2F81D6504FB00F8CEA4 /* ResourcePath.hpp */,
 				C459A2F91D6504FB00F8CEA4 /* main.cpp */,
 				C459A2FB1D6504FB00F8CEA4 /* Resources */,
 				C459A2F41D6504FB00F8CEA4 /* Supporting Files */,
+				C459A3091D65054E00F8CEA4 /* Cannon.cpp */,
+				C459A30A1D65054E00F8CEA4 /* Cannon.hpp */,
+				C459A30C1D6505C400F8CEA4 /* Ball.cpp */,
+				C459A30D1D6505C400F8CEA4 /* Ball.hpp */,
+				C459A30F1D6505D200F8CEA4 /* Powerbar.cpp */,
+				C459A3101D6505D200F8CEA4 /* Powerbar.hpp */,
+				C459A3121D6505DC00F8CEA4 /* Target.cpp */,
+				C459A3131D6505DC00F8CEA4 /* Target.hpp */,
 			);
 			path = Cannonball;
 			sourceTree = "<group>";
@@ -77,10 +84,6 @@
 		C459A2FB1D6504FB00F8CEA4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				C459A2FC1D6504FB00F8CEA4 /* cute_image.jpg */,
-				C459A2FE1D6504FB00F8CEA4 /* nice_music.ogg */,
-				C459A3001D6504FB00F8CEA4 /* sansation.ttf */,
-				C459A3021D6504FB00F8CEA4 /* icon.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -142,10 +145,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C459A3031D6504FB00F8CEA4 /* icon.png in Resources */,
-				C459A3011D6504FB00F8CEA4 /* sansation.ttf in Resources */,
-				C459A2FF1D6504FB00F8CEA4 /* nice_music.ogg in Resources */,
-				C459A2FD1D6504FB00F8CEA4 /* cute_image.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,8 +171,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C459A30E1D6505C400F8CEA4 /* Ball.cpp in Sources */,
+				C459A30B1D65054E00F8CEA4 /* Cannon.cpp in Sources */,
+				C459A3141D6505DC00F8CEA4 /* Target.cpp in Sources */,
 				C459A2FA1D6504FB00F8CEA4 /* main.cpp in Sources */,
-				C459A2F71D6504FB00F8CEA4 /* ResourcePath.mm in Sources */,
+				C459A3111D6505D200F8CEA4 /* Powerbar.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
