@@ -19,6 +19,8 @@ public:
     int get_rotation();
     void set_rotation(int direction);
     void draw();
+    int get_width();
+    int get_midpoint();
     
     
     
@@ -26,7 +28,7 @@ public:
 private:
     sf::RenderWindow &window;
     sf::Sprite cannon;
-    float rotation;
+    float rotation = 0;
     float rotation_speed = 1;
     sf::FloatRect origin;
     

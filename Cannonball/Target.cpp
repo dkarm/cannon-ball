@@ -7,3 +7,27 @@
 //
 
 #include "Target.hpp"
+
+
+Target::Target(sf::RenderWindow &window): window(window)
+{
+    target.setPosition(750, 300);
+    target.setFillColor(sf::Color::Red);
+    
+    pos.x = 20;
+    pos.y = 20;
+    
+    target.setSize(pos);
+    
+    
+}
+
+void Target::draw()
+{
+    return window.draw(target);
+}
+
+sf::FloatRect Target::get_position()
+{
+    return target.getGlobalBounds();
+}
